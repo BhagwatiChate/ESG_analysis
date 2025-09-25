@@ -36,8 +36,9 @@ ESG_Deliverables/
 
 4. **Data**
    - Place downloaded ESG/CSR PDF reports in a local folder of your choice.
-   - The notebook lets you configure an input directory path and will parse + process all PDFs in that directory.
+   - The notebook lets you configure an input directory path and will parse + process all PDFs in that directory. You may need to change the paths in the notebook.
    - Outputs, including the cross-company summary table, will be written to `outputs/` by default.
+   - The Output directory contains all the results generated.
 
 ## Notes
 - Some optional packages (OCR) require system dependencies (e.g., Tesseract). If OCR is not required for your PDFs, you can skip installing them.
