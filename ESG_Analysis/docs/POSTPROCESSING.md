@@ -15,9 +15,6 @@ A CSV exported from the notebook with one row per claim, with columns:
 
 ## How to run (from the notebook)
 ```python
-import pandas as pd
-from src.postprocess_summary import run_global_summary
-
 # Replace with the actual path your pipeline writes
 INPUT_CSV = "outputs/final_claims_table.csv"
 
