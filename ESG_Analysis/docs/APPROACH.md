@@ -8,13 +8,13 @@ High-level stages:
 2. **Normalization & Chunking** — de-duplication, language filtering, section-aware splitting.
 3. **ESG Topic Classification** — Assigns one/more topics from a hybrid SASB/GRI taxonomy.
 4. **Claim Analysis** — Sentiment (polarity) + Specificity (heuristics & linguistic cues).
-5. **(Optional) Greenwashing Risk** — Composite score from sentiment positivity, specificity, hedging language, and forward vs backward-looking bias.
+5. **Greenwashing Risk** — Composite score from sentiment positivity, specificity, hedging language, and forward vs backward-looking bias.
 6. **Synthesis** — Produces a cross-company summary table for analysts.
 
 ## 2) Rationale for Choices
 
 ### Companies & Sectors
-The notebook is parameterized to work with **3–5 publicly traded companies** from at least **two sectors**. You can set the `COMPANY_CONFIG` in the notebook to map a company to its sector and its PDF file path(s).
+The notebook is parameterized to work with **multiple publicly traded companies** from at least **two sectors**. You can set the `COMPANY_CONFIG` in the notebook to map a company to its sector and its PDF file path(s).
 
 ### ESG Framework
 We use a **hybrid** approach: **SASB** to anchor financial materiality (industry-specific) and **GRI** topic definitions to improve granularity and explainability. This aligns the output with investor needs while preserving coverage across Environmental, Social, and Governance themes.
@@ -37,7 +37,7 @@ We use a **hybrid** approach: **SASB** to anchor financial materiality (industry
 - Zero-shot models can be slow on CPU; batching and caching are used to keep runtime reasonable.
 
 ## 4) Future Work
-- Add weak supervision (Snorkel-style) to train a small supervised classifier for specificity.
+- Add weak supervision to train a small supervised classifier for specificity.
 - Expand taxonomy coverage with sector priors from SASB mappings.
 - Integrate a retrieval layer to attach citations (page coords/snippets) to each claim in the summary table.
 - Evaluate with a small, manually labeled set for precision/recall on topics and calibration plots for specificity.
@@ -45,4 +45,4 @@ We use a **hybrid** approach: **SASB** to anchor financial materiality (industry
 
 ## 5) Reproducibility
 - The notebook includes deterministic seeds where applicable.
-- The environment is pinned in `requirements.txt`. For stricter reproducibility, export an `environment.yml` from the resolved environment.
+- The environment is pinned in `requirements.txt`.
