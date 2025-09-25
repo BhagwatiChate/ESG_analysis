@@ -10,8 +10,6 @@ ESG_Deliverables/
 ├─ docs/
 │  ├─ APPROACH.md
 │  └─ LICENSE.md
-├─ src/
-│  └─ __init__.py
 ├─ outputs/
 │  └─ sample_summary_table.csv
 ├─ requirements.txt
@@ -44,8 +42,3 @@ ESG_Deliverables/
 ## Notes
 - Some optional packages (OCR) require system dependencies (e.g., Tesseract). If OCR is not required for your PDFs, you can skip installing them.
 - GPU acceleration (PyTorch + CUDA) is optional but recommended for large models; CPU-only works for the POC.
-- The pipeline is self-contained in a single, executable notebook to comply with the assignment.
-
-
-## Post-Processing: Global Summaries
-See `docs/POSTPROCESSING.md` and use `src/postprocess_summary.py` to combine all PDFs' results into an executive summary and topic briefs.
