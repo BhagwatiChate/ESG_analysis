@@ -5,6 +5,7 @@ This repository contains the finalized pipeline notebook and supporting docs to 
 ## Repository Structure
 ```
 ESG_Deliverables/
+├─ data/
 ├─ notebooks/
 │  └─ ESG_Pipeline.ipynb
 ├─ docs/
